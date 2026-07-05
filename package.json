@@ -1,0 +1,11 @@
+{
+  "name": "construction-markup-tools",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix site",
+    "build": "npm install --prefix site --legacy-peer-deps && npm run build --prefix site",
+    "start": "npm run start --prefix site",
+    "preview": "npm run start --prefix site"
+  }
+}
