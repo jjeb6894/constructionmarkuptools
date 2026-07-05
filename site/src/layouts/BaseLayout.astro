@@ -1,0 +1,35 @@
+---
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Construction Markup Tools</a>
+      <nav aria-label="Primary navigation">
+        <a href="/bluebeam-tool-sets/">Tool sets</a>
+        <a href="/free-bluebeam-symbols-sample/">Free sample</a>
+        <a href="/compatibility/">Compatibility</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>Bluebeam and Revu are trademarks of their respective owners. Construction Markup Tools is not affiliated with or endorsed by Bluebeam, Inc.</p>
+      <nav aria-label="Footer navigation">
+        <a href="/license/">Licence</a>
+        <a href="/contact/">Contact</a>
+        <a href="/bluebeam-tool-set-faq/">FAQ</a>
+      </nav>
+    </footer>
+  </body>
+</html>

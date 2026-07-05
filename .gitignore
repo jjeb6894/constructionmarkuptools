@@ -1,0 +1,32 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node/Astro
+node_modules/
+site/node_modules/
+site/dist/
+.astro/
+site/.astro/
+
+# Raw crawl evidence and generated duplicates
+data/raw/
+outputs/constructionmarkuptools-system/
+outputs/*.zip
+
+# Local work/candidates
+work/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

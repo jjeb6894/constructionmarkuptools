@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  const pageModules = import.meta.glob('../content/pages/*.md', { eager: true });
+  const productModules = import.meta.glob('../content/products/*.md', { eager: true });
+  const modules = { ...pageModules, ...productModules };
+  return Object.values(modules).filter((mod) => mod.frontmatter.url !== '/').map((mod) => {
+    const url = mod.frontmatter.url || '/';
+    const slug = url === '/' ? undefined : url.replace(/^\/|\/$/g, '');
+    return { params: { slug }, props: { mod } };
+  });
+}
+
+const { mod } = Astro.props;
+const { Content, frontmatter } = mod;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': frontmatter.url?.includes('how-to') ? 'HowTo' : frontmatter.url?.includes('faq') ? 'FAQPage' : 'WebPage',
+  name: frontmatter.title,
+  description: frontmatter.description,
+  url: `https://constructionmarkuptools.com${frontmatter.url || '/'}`
+};
+---
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <article class="page">
+    <Content />
+    <section class="cta-band">
+      <h2>Try a sample before building your full library</h2>
+      <p>Start with a small original symbol pack, then upgrade to a trade pack or bundle when your team is ready.</p>
+      <a class="button" href="/free-bluebeam-symbols-sample/">Get the free sample</a>
+    </section>
+  </article>
+</BaseLayout>

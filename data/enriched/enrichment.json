@@ -1,0 +1,6 @@
+{
+  "ollama_available": false,
+  "pages": [],
+  "products": [],
+  "note": "Ollama service not reachable; deterministic extraction outputs remain available."
+}

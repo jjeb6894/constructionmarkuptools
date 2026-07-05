@@ -1,0 +1,9 @@
+[
+  {"name": "Electrical Tool Set", "url": "/bluebeam-electrical-tool-set/", "phase": "starter"},
+  {"name": "Fire Alarm Symbols", "url": "/bluebeam-fire-alarm-symbols/", "phase": "starter"},
+  {"name": "CCTV Tool Set", "url": "/bluebeam-cctv-tool-set/", "phase": "starter"},
+  {"name": "Security and Access Control Tool Set", "url": "/bluebeam-security-tool-set/", "phase": "starter"},
+  {"name": "AV and Data Symbols", "url": "/bluebeam-av-data-symbols/", "phase": "starter"},
+  {"name": "Telecom Tool Set", "url": "/bluebeam-telecom-tool-set/", "phase": "starter"},
+  {"name": "Free Bluebeam Symbols Sample", "url": "/free-bluebeam-symbols-sample/", "phase": "lead magnet"}
+]

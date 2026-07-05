@@ -1,0 +1,453 @@
+{
+  "electrical": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://bim-depot.com/products/bluebeam-toolchest-electrical",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://bim-depot.com/collections/membership",
+      "https://www.axis.com/products/accessories",
+      "https://www.axis.com/products/axis-m1055-l",
+      "https://www.avigilon.com/br/bluebeamrevu",
+      "https://www.avigilon.com/de/bluebeamrevu",
+      "https://www.cadgroup.com.au/autodesk-aec-collection/",
+      "https://www.cadgroup.com.au/autodesk-pdm-collection/",
+      "https://www.cadgroup.com.au/support/",
+      "https://simpletechresources.com/product/electrical-conduit-tool-set-for-bluebeam/",
+      "https://zentekconsultants.net/zentek-revu-tools/"
+    ],
+    "observed_terms": [
+      "conduit",
+      "electrical",
+      "electrician",
+      "lighting",
+      "power"
+    ]
+  },
+  "fire alarm": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://bim-depot.com/collections/best-selling",
+      "https://www.avigilon.com/br/bluebeamrevu",
+      "https://www.avigilon.com/de/bluebeamrevu",
+      "https://www.pelco.com/br/bluebeamrevu",
+      "https://www.pelco.com/es/bluebeamrevu",
+      "https://simpletechresources.com/product/fire-alarm-symbols/",
+      "https://www.reddit.com/r/firealarms/comments/1oid6ce/bluebeam_tool_kits/",
+      "https://community.bluebeam.com/discussion/6046/fire-alarm-markups-for-tool-chests",
+      "https://www.avigilon.com/blog/vape-detectors-guide"
+    ],
+    "observed_terms": [
+      "alarm",
+      "detector",
+      "fire alarm"
+    ]
+  },
+  "CCTV": {
+    "source_urls": [
+      "https://university.bluebeam.com/how-to-modify-and-organize-tool-sets",
+      "https://university.bluebeam.com/how-to-tool-chest",
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://university.bluebeam.com/",
+      "https://university.bluebeam.com/how-to-modify-and-organize-tool-sets/2284988",
+      "https://university.bluebeam.com/how-to-tool-chest/1743249",
+      "https://www.axis.com/products/access-control",
+      "https://www.axis.com/products/accessories",
+      "https://www.axis.com/products/axis-device-manager-extend",
+      "https://www.axis.com/products/axis-m1055-l",
+      "https://www.avigilon.com/de/bluebeamrevu",
+      "https://www.pelco.com/es/bluebeamrevu",
+      "https://www.pelco.com/it/bluebeamrevu"
+    ],
+    "observed_terms": [
+      "camera",
+      "cctv",
+      "surveillance",
+      "video"
+    ]
+  },
+  "access control": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://www.axis.com/products/access-control",
+      "https://www.axis.com/products/accessories",
+      "https://www.axis.com/products/axis-device-manager-extend",
+      "https://www.axis.com/products/axis-m1055-l",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://www.axis.com/products",
+      "https://www.pelco.com/blog/physical-security-guide"
+    ],
+    "observed_terms": [
+      "access control",
+      "door"
+    ]
+  },
+  "security": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://university.bluebeam.com/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://zentekconsultants.net/bluebeam-max/",
+      "https://zentekconsultants.net/bluebeam-revu-online-courses/",
+      "https://zentekconsultants.net/bluebeam-revu/",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services/",
+      "https://zentekconsultants.net/cad-data-integration-symbology-services/",
+      "https://zentekconsultants.net/drafting-support-for-everyone-cad-zentek-consultants/"
+    ],
+    "observed_terms": [
+      "alarm",
+      "security",
+      "sensor"
+    ]
+  },
+  "AV/audio-visual": {
+    "source_urls": [
+      "https://university.bluebeam.com/how-to-tool-chest",
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://bim-depot.com/products/bluebeam-toolchest-electrical",
+      "https://store.archtoolbox.com/bbtoolsets/",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://www.hanwhavision.com/support/tools/bluebeam-revu-profiles",
+      "https://hanwhavisionamerica.com/bluebeam-revu-profiles/",
+      "https://sensorworx.com/design-tools/",
+      "https://www.cadgroup.com.au/knowledge-base/adding-industry-specific-tool-sets-revu/",
+      "https://university.bluebeam.com/",
+      "https://university.bluebeam.com/how-to-tool-chest/1743249",
+      "https://store.archtoolbox.com"
+    ],
+    "observed_terms": [
+      "audio",
+      "av",
+      "display",
+      "rack",
+      "speaker",
+      "visual"
+    ]
+  },
+  "telecom/data": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://www.cadgroup.com.au/knowledge-base/adding-industry-specific-tool-sets-revu/",
+      "https://university.bluebeam.com/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://zentekconsultants.net/bluebeam-max/",
+      "https://zentekconsultants.net/bluebeam-revu-online-courses/",
+      "https://zentekconsultants.net/bluebeam-revu/",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services/",
+      "https://zentekconsultants.net/cad-data-integration-symbology-services/",
+      "https://zentekconsultants.net/drafting-support-for-everyone-cad-zentek-consultants/",
+      "https://www.axis.com/products/access-control"
+    ],
+    "observed_terms": [
+      "data",
+      "low voltage",
+      "network",
+      "telecom"
+    ]
+  },
+  "lighting": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://sensorworx.com/design-tools/",
+      "https://bim-depot.com/collections/best-selling"
+    ],
+    "observed_terms": [
+      "fixture",
+      "lighting"
+    ]
+  },
+  "HVAC/mechanical": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://bim-depot.com/products/bluebeam-toolchest-electrical",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://www.cadgroup.com.au/knowledge-base/adding-industry-specific-tool-sets-revu/",
+      "https://university.bluebeam.com/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://bim-depot.com/collections/membership",
+      "https://www.axis.com/products/access-control",
+      "https://www.axis.com/products/accessories",
+      "https://www.axis.com/products/axis-device-manager-extend",
+      "https://www.axis.com/products/axis-m1055-l"
+    ],
+    "observed_terms": [
+      "duct",
+      "hvac",
+      "mechanical"
+    ]
+  },
+  "plumbing": {
+    "source_urls": [
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://zentekconsultants.net/bluebeam-max/",
+      "https://zentekconsultants.net/bluebeam-revu-online-courses/",
+      "https://zentekconsultants.net/bluebeam-revu/",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services/",
+      "https://zentekconsultants.net/cad-data-integration-symbology-services/",
+      "https://zentekconsultants.net/drafting-support-for-everyone-cad-zentek-consultants/"
+    ],
+    "observed_terms": [
+      "plumbing"
+    ]
+  },
+  "structural": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bim-depot.com/collections/best-selling",
+      "https://www.cadgroup.com.au/autodesk-aec-collection/",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://zentekconsultants.net/bluebeam-revu/"
+    ],
+    "observed_terms": [
+      "concrete",
+      "steel",
+      "structural"
+    ]
+  },
+  "architectural": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://bim-depot.com/products/bluebeam-toolchest-electrical",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://bim-depot.com/collections/membership",
+      "https://store.archtoolbox.com",
+      "https://www.cadgroup.com.au/training/bluebeam/",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://www.axis.com/products/access-control",
+      "https://www.cadgroup.com.au/autodesk-aec-collection/"
+    ],
+    "observed_terms": [
+      "architectural",
+      "door",
+      "wall",
+      "window"
+    ]
+  },
+  "landscaping/site planning": {
+    "source_urls": [],
+    "observed_terms": []
+  },
+  "traffic/MUTCD": {
+    "source_urls": [
+      "https://university.bluebeam.com/how-to-modify-and-organize-tool-sets",
+      "https://university.bluebeam.com/how-to-tool-chest",
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bim-depot.com/products/bluebeam-toolchest-electrical",
+      "https://store.archtoolbox.com/bbtoolsets/",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://www.cadgroup.com.au/knowledge-base/adding-industry-specific-tool-sets-revu/",
+      "https://university.bluebeam.com/",
+      "https://university.bluebeam.com/how-to-modify-and-organize-tool-sets/2284988",
+      "https://university.bluebeam.com/how-to-tool-chest/1743249",
+      "https://bim-depot.com/collections/best-selling",
+      "https://store.archtoolbox.com"
+    ],
+    "observed_terms": [
+      "mutcd",
+      "road",
+      "sign",
+      "traffic"
+    ]
+  },
+  "estimating/takeoff": {
+    "source_urls": [
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://www.cadgroup.com.au/knowledge-base/adding-industry-specific-tool-sets-revu/",
+      "https://university.bluebeam.com/",
+      "https://zentekconsultants.net/bluebeam-max/",
+      "https://zentekconsultants.net/bluebeam-revu-online-courses/",
+      "https://zentekconsultants.net/bluebeam-revu/",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services/",
+      "https://zentekconsultants.net/cad-data-integration-symbology-services/",
+      "https://zentekconsultants.net/drafting-support-for-everyone-cad-zentek-consultants/",
+      "https://www.cadgroup.com.au/autodesk-aec-collection/",
+      "https://www.cadgroup.com.au/autodesk-pdm-collection/",
+      "https://www.cadgroup.com.au/bluebeam-revu/",
+      "https://www.cadgroup.com.au/category/knowledge-base/bluebeam/",
+      "https://www.cadgroup.com.au/category/products/",
+      "https://www.cadgroup.com.au/support/",
+      "https://www.cadgroup.com.au/training/bluebeam/"
+    ],
+    "observed_terms": [
+      "estimating",
+      "measurement",
+      "quantity",
+      "takeoff"
+    ]
+  },
+  "general Bluebeam workflow": {
+    "source_urls": [
+      "https://university.bluebeam.com/how-to-modify-and-organize-tool-sets",
+      "https://university.bluebeam.com/how-to-tool-chest",
+      "https://markuptoolsets.com/",
+      "https://markuptoolsets.com/collections/tool-sets-for-bluebeam-tool-sets",
+      "https://markuptoolsets.com/collections/bluebeam-revu-drawing-tool-sets",
+      "https://bim-depot.com/",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://bim-depot.com/products/bluebeam-toolchest-electrical",
+      "https://store.archtoolbox.com/bbtoolsets/",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://www.axis.com/support/tools/axis-tool-set-for-bluebeam-revu",
+      "https://www.axis.com/products/axis-tool-set-for-bluebeamr-revur/support",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://www.hanwhavision.com/support/tools/bluebeam-revu-profiles",
+      "https://hanwhavisionamerica.com/bluebeam-revu-profiles/",
+      "https://sensorworx.com/design-tools/",
+      "https://www.cadgroup.com.au/knowledge-base/adding-industry-specific-tool-sets-revu/",
+      "https://university.bluebeam.com/"
+    ],
+    "observed_terms": [
+      "bluebeam",
+      "revu",
+      "tool chest",
+      "tool set"
+    ]
+  },
+  "free samples": {
+    "source_urls": [
+      "https://bim-depot.com/",
+      "https://bim-depot.com/products/bluebeam-toolset-fire-alarm",
+      "https://bim-depot.com/products/bluebeam-toolchest-electrical",
+      "https://university.bluebeam.com/",
+      "https://bim-depot.com/collections/membership",
+      "https://www.cadgroup.com.au/autodesk-pdm-collection/",
+      "https://www.cadgroup.com.au/bluebeam-revu/",
+      "https://bim-depot.com/collections/bluebeam",
+      "https://bbtoolsets.com/free/",
+      "https://uchapter2.com/free-bluebeam-revu-toolsets/",
+      "https://uchapter2.com/resources/free-downloads/bluebeam-tool-sets/",
+      "https://www.reddit.com/r/Revu/comments/uj3rk5/free_bluebeam_toolsets/",
+      "https://bim-depot.com/collections/best-selling",
+      "https://store.archtoolbox.com/licenses/",
+      "https://www.pelco.com/blog/physical-security-guide"
+    ],
+    "observed_terms": [
+      "free",
+      "sample"
+    ]
+  },
+  "tutorials/how-to guides": {
+    "source_urls": [
+      "https://university.bluebeam.com/how-to-modify-and-organize-tool-sets",
+      "https://university.bluebeam.com/how-to-tool-chest",
+      "https://zentekconsultants.net/zentek-revu-tools/",
+      "https://www.avigilon.com/bluebeamrevu",
+      "https://www.pelco.com/bluebeamrevu",
+      "https://sensorworx.com/design-tools/",
+      "https://www.cadgroup.com.au/knowledge-base/adding-industry-specific-tool-sets-revu/",
+      "https://university.bluebeam.com/",
+      "https://university.bluebeam.com/how-to-modify-and-organize-tool-sets/2284988",
+      "https://university.bluebeam.com/how-to-tool-chest/1743249",
+      "https://store.archtoolbox.com",
+      "https://zentekconsultants.net/bluebeam-max/",
+      "https://zentekconsultants.net/bluebeam-revu-online-courses/",
+      "https://zentekconsultants.net/bluebeam-revu/",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services",
+      "https://zentekconsultants.net/bluebeam-tool-chest-customization-services/",
+      "https://zentekconsultants.net/cad-data-integration-symbology-services/",
+      "https://zentekconsultants.net/drafting-support-for-everyone-cad-zentek-consultants/",
+      "https://www.cadgroup.com.au/category/knowledge-base/bluebeam/",
+      "https://www.cadgroup.com.au/category/products/"
+    ],
+    "observed_terms": [
+      "guide",
+      "how to",
+      "tips",
+      "tutorial"
+    ]
+  }
+}
