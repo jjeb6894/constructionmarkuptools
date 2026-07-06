@@ -1,4 +1,4 @@
-﻿# Construction Markup Tools - All Content Export
+# Construction Markup Tools - All Content Export
 
 Generated: 2026-07-04
 
