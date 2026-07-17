@@ -1,5 +1,7 @@
 # Construction Markup Tools Competitive Intelligence System
 
+> **Research archive:** This repository preserves the original ethical market-research and content-planning system. The active independent storefront is [ConstructionMarkupTools.com](https://constructionmarkuptools.com/), and the free Windows BTX import utility is maintained in the public [Tool Set AutoLink repository](https://github.com/jjeb6894/tool-set-autolink). This project is not affiliated with or endorsed by Bluebeam, Inc.
+
 This workspace contains an ethical public-web research pipeline and static site scaffold for `constructionmarkuptools.com`.
 
 The goal is market mapping, SEO planning, product strategy, and original page generation. It must not clone, copy, republish, or closely paraphrase competitor text, downloadable files, product files, symbols, images, layouts, or paid resources.
