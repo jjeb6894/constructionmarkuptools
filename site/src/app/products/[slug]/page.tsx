@@ -39,6 +39,7 @@ export default function ProductPage({ params }: Props) {
   const product = getProductBySlug(params.slug);
   if (!product) notFound();
 
+  const isJobPack = product.productKind === 'job-pack';
   const relatedProducts = getRelatedProducts(product.relatedSlugs);
   const schemas = [
     productSchema({
@@ -47,6 +48,8 @@ export default function ProductPage({ params }: Props) {
       price: product.price,
       url: `/products/${product.slug}/`,
       sku: product.slug,
+      softwareRequirement: product.softwareRequirement,
+      available: Boolean(product.checkoutUrl),
     }),
     faqSchema(product.faqs),
     breadcrumbSchema([
@@ -82,6 +85,13 @@ export default function ProductPage({ params }: Props) {
               {product.fullDescription}
             </p>
 
+            {isJobPack && product.jobMoment && (
+              <div className="mt-6 rounded-xl border-l-4 border-brand-500 bg-brand-50 px-5 py-4">
+                <p className="text-xs font-bold uppercase tracking-wide text-brand-800">When you need it</p>
+                <p className="mt-1 text-sm leading-6 text-slate-700">{product.jobMoment}</p>
+              </div>
+            )}
+
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <span className="px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700 border border-slate-200">
                 {product.category}
@@ -92,6 +102,20 @@ export default function ProductPage({ params }: Props) {
                 </span>
               ))}
             </div>
+
+            {isJobPack && product.previewImage && (
+              <figure className="mt-7 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-card">
+                <img
+                  src={product.previewImage}
+                  alt={`Preview of the ${product.title} Excel workbook`}
+                  className="block h-auto w-full"
+                  loading="eager"
+                />
+                <figcaption className="border-t border-slate-200 px-4 py-3 text-xs text-slate-500">
+                  Real workbook preview. Yellow cells are for project details; blue columns contain automatic calculations where shown.
+                </figcaption>
+              </figure>
+            )}
           </div>
 
           {/* Purchase card */}
@@ -133,9 +157,8 @@ export default function ProductPage({ params }: Props) {
                 </Link>
               ) : product.price ? (
                 <>
-                  {/* TODO: Replace with Stripe Checkout link */}
                   <a
-                    href="#checkout"
+                    href={product.checkoutUrl ?? '#checkout'}
                     className="w-full inline-flex items-center justify-center h-12 px-6 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-700 transition-colors"
                   >
                     Buy Now — £{product.price}
@@ -151,7 +174,7 @@ export default function ProductPage({ params }: Props) {
                   File format: {product.fileFormats.join(', ')}
                 </p>
                 <p className="mt-1 text-xs text-slate-500">
-                  Requires Bluebeam Revu (sold separately)
+                  {product.softwareRequirement ?? 'Requires Bluebeam Revu (sold separately)'}
                 </p>
               </div>
             </div>
@@ -176,11 +199,13 @@ export default function ProductPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Symbol categories */}
+          {/* Workbook fields / symbol categories */}
           <section>
-            <h2 className="text-h2 font-bold text-slate-900">Symbol Categories</h2>
+            <h2 className="text-h2 font-bold text-slate-900">{isJobPack ? 'Fields Inside the Workbook' : 'Symbol Categories'}</h2>
             <p className="mt-2 text-sm text-slate-600">
-              Tools are organised into these groups inside the Bluebeam Revu Tool Chest.
+              {isJobPack
+                ? 'The working sheet keeps the information needed for a useful, traceable site record in one row.'
+                : 'Tools are organised into these groups inside the Bluebeam Revu Tool Chest.'}
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {product.symbolCategories.map((cat) => (
@@ -209,7 +234,7 @@ export default function ProductPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Compatible with Bluebeam */}
+          {/* Compatibility */}
           <section className="rounded-2xl bg-brand-50 border border-brand-200 p-6">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center flex-shrink-0">
@@ -218,9 +243,11 @@ export default function ProductPage({ params }: Props) {
                 </svg>
               </div>
               <div>
-                <h2 className="text-base font-bold text-slate-900">Compatible with Bluebeam Revu</h2>
+                <h2 className="text-base font-bold text-slate-900">{isJobPack ? 'Editable, reusable and ready for project copies' : 'Compatible with Bluebeam Revu'}</h2>
                 <p className="mt-1 text-sm text-slate-600">
-                  This tool set is designed for use with Bluebeam Revu. Bluebeam Revu is not included with this product.
+                  {isJobPack
+                    ? 'Open the XLSX file, add your project details, and save a clean copy for each job. The workbook includes a filled example and instructions.'
+                    : 'This tool set is designed for use with Bluebeam Revu. Bluebeam Revu is not included with this product.'}
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {product.compatibleWith.map((v) => (
@@ -229,23 +256,27 @@ export default function ProductPage({ params }: Props) {
                     </span>
                   ))}
                 </div>
-                <p className="mt-3 text-xs text-slate-500">
-                  Bluebeam and Revu are trademarks of their respective owners. Not affiliated with or endorsed by Bluebeam, Inc.
-                </p>
+                {!isJobPack && (
+                  <p className="mt-3 text-xs text-slate-500">
+                    Bluebeam and Revu are trademarks of their respective owners. Not affiliated with or endorsed by Bluebeam, Inc.
+                  </p>
+                )}
               </div>
             </div>
           </section>
 
-          {/* Installation guide */}
+          {/* Usage guide */}
           <section>
-            <h2 className="text-h2 font-bold text-slate-900">How to Import and Use</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              The import process takes under a minute.{' '}
-              <Link href="/guides/how-to-import-bluebeam-btx-tool-set/" className="text-brand-600 hover:text-brand-800 font-medium">
-                Read the full import guide
-              </Link>{' '}
-              for detailed instructions.
-            </p>
+            <h2 className="text-h2 font-bold text-slate-900">{isJobPack ? 'How to Use the Template' : 'How to Import and Use'}</h2>
+            {!isJobPack && (
+              <p className="mt-2 text-sm text-slate-600">
+                The import process takes under a minute.{' '}
+                <Link href="/guides/how-to-import-bluebeam-btx-tool-set/" className="text-brand-600 hover:text-brand-800 font-medium">
+                  Read the full import guide
+                </Link>{' '}
+                for detailed instructions.
+              </p>
+            )}
             <ol className="mt-5 space-y-4">
               {product.installSteps.map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -258,17 +289,26 @@ export default function ProductPage({ params }: Props) {
             </ol>
           </section>
 
+          {isJobPack && product.sourceNote && (
+            <section className="rounded-xl border border-amber-200 bg-amber-50 p-5">
+              <h2 className="text-base font-bold text-slate-900">Use the project requirements</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-700">{product.sourceNote}</p>
+            </section>
+          )}
+
           {/* Trust badges */}
           <section>
             <h2 className="text-h2 font-bold text-slate-900 mb-5">Quality and Delivery</h2>
-            <TrustBadges />
+            <TrustBadges kind={isJobPack ? 'job-pack' : 'bluebeam'} />
           </section>
 
           {/* Licence note */}
           <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
             <h2 className="text-base font-bold text-slate-900">Licence and Usage</h2>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-              Each purchase is for one user for internal business use across their projects. Team and company licences are available. After importing into Bluebeam Revu, you may adjust colours, labels, and tool behaviour for project needs. Redistribution of the original BTX file is not permitted.
+              {isJobPack
+                ? 'Each purchase is for one user for internal business use across their projects. You may add your branding and project-specific fields to working copies. Reselling, sharing, or redistributing the original template is not permitted.'
+                : 'Each purchase is for one user for internal business use across their projects. Team and company licences are available. After importing into Bluebeam Revu, you may adjust colours, labels, and tool behaviour for project needs. Redistribution of the original BTX file is not permitted.'}
             </p>
             <Link href="/license/" className="mt-3 inline-block text-sm font-semibold text-brand-600 hover:text-brand-800">
               Read the full licence terms →
@@ -288,21 +328,15 @@ export default function ProductPage({ params }: Props) {
               <div className="mt-4">
                 <span className="text-3xl font-bold text-white">£{product.price}</span>
               </div>
-              {/* TODO: Replace button href with Stripe Checkout URL when payment is configured */}
               <a
-                href="#checkout"
-                className="mt-6 inline-flex items-center justify-center h-12 px-8 rounded-xl bg-brand-500 text-white font-bold hover:bg-brand-400 transition-colors cursor-not-allowed opacity-70"
-                aria-disabled="true"
+                href={product.checkoutUrl ?? '/contact/'}
+                className="mt-6 inline-flex items-center justify-center h-12 px-8 rounded-xl bg-brand-500 text-white font-bold hover:bg-brand-400 transition-colors"
               >
-                Buy Now (Payment setup coming soon)
+                {product.checkoutUrl ? `Buy securely with Stripe — £${product.price}` : 'Contact us to purchase'}
               </a>
               <p className="mt-3 text-xs text-slate-500">
-                {/* TODO: Add Stripe integration */}
-                Payment processing is being configured. Contact us to arrange a purchase in the meantime.
+                {product.checkoutUrl ? 'Secure checkout is processed by Stripe.' : 'Secure Stripe checkout is being connected.'}
               </p>
-              <Link href="/contact/" className="mt-2 inline-block text-sm text-brand-400 hover:text-brand-200">
-                Contact us →
-              </Link>
             </section>
           )}
 
@@ -311,14 +345,15 @@ export default function ProductPage({ params }: Props) {
             <RelatedProducts products={relatedProducts} />
           )}
 
-          {/* Free sample CTA */}
           <CTASection
-            headline="Test the workflow before you buy"
-            body="Download the free sample pack to confirm the import process, symbol quality, and Tool Chest structure work on your system."
-            primaryLabel="Download Free Sample"
-            primaryHref="/free-bluebeam-symbols-sample/"
-            secondaryLabel="View All Products"
-            secondaryHref="/products/"
+            headline={isJobPack ? 'Need another project record?' : 'Test the workflow before you buy'}
+            body={isJobPack
+              ? 'Browse the full range of editable construction inspection, commissioning, test and handover templates.'
+              : 'Download the free sample pack to confirm the import process, symbol quality, and Tool Chest structure work on your system.'}
+            primaryLabel={isJobPack ? 'View All Job Packs' : 'Download Free Sample'}
+            primaryHref={isJobPack ? '/products/#job-packs' : '/free-bluebeam-symbols-sample/'}
+            secondaryLabel={isJobPack ? 'Contact Us' : 'View All Products'}
+            secondaryHref={isJobPack ? '/contact/' : '/products/'}
           />
         </div>
       </div>

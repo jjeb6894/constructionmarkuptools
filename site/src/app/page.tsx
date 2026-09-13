@@ -5,14 +5,14 @@ import ArticleCard from '@/components/ArticleCard';
 import CTASection from '@/components/CTASection';
 import FAQ from '@/components/FAQ';
 import Schema from '@/components/Schema';
-import { getFeaturedProducts } from '@/lib/products';
+import { getFeaturedJobPacks, getFeaturedProducts } from '@/lib/products';
 import { getAllGuides, getAllBlogPosts } from '@/lib/articles';
 import { organizationSchema, websiteSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Construction Markup Tools — Professional Bluebeam Tool Sets',
+  title: 'Construction Templates and Professional Markup Tools',
   description:
-    'Download ready-made Bluebeam Revu markup tool sets for electrical, fire alarm, CCTV, security, AV/data, MEP, and estimating workflows. Original symbols, instant download.',
+    'Download focused construction inspection, testing and commissioning Excel templates, plus ready-made Bluebeam Revu markup tool sets for trade workflows.',
   alternates: { canonical: 'https://constructionmarkuptools.com/' },
 };
 
@@ -148,6 +148,7 @@ const homeFaqs = [
 
 export default function HomePage() {
   const featuredProducts = getFeaturedProducts();
+  const featuredJobPacks = getFeaturedJobPacks();
   const guides = getAllGuides().slice(0, 2);
   const posts = getAllBlogPosts().slice(0, 1);
   const featuredArticles = [...guides, ...posts];
@@ -162,20 +163,20 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-600/20 border border-brand-500/30 text-brand-300 text-xs font-medium mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
-              Original downloadable BTX tool sets
+              Practical downloads for live construction work
             </div>
             <h1 className="text-display font-bold text-white leading-tight">
-              Professional Bluebeam Toolsets for Construction Markups
+              Construction Templates and Markup Tools That Save Site Time
             </h1>
             <p className="mt-5 text-lg text-slate-300 leading-relaxed max-w-2xl">
-              Download ready-made symbol packs and markup tools for electrical, CCTV, security, fire alarm, AV/data, and MEP workflows. Import into Bluebeam Revu and start reviewing drawings faster.
+              Get focused Excel records for inspections, testing, commissioning, and handover—plus ready-made Bluebeam symbol packs for drawing reviews and takeoffs.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/products/"
                 className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-500 transition-colors"
               >
-                View All Tool Sets
+                View All Products
               </Link>
               <Link
                 href="/free-bluebeam-symbols-sample/"
@@ -187,6 +188,22 @@ export default function HomePage() {
             <p className="mt-6 text-xs text-slate-500">
               Bluebeam and Revu are trademarks of their respective owners. Not affiliated with or endorsed by Bluebeam, Inc.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-18 px-5 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-content mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-brand-700">New job-ready downloads</p>
+              <h2 className="mt-2 text-h1 font-bold text-slate-900">Records You Need Before the Work Is Covered</h2>
+              <p className="mt-3 text-base text-slate-600 max-w-2xl">Editable workbooks for the point where a test, photograph, reading, or sign-off needs to be captured clearly and handed over.</p>
+            </div>
+            <Link href="/products/#job-packs" className="text-sm font-bold text-brand-700 hover:text-brand-900 whitespace-nowrap">View all job packs →</Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {featuredJobPacks.map((product) => <ProductCard key={product.slug} product={product} />)}
           </div>
         </div>
       </section>

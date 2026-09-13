@@ -6,11 +6,11 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://constructionmarkuptools.com'),
   title: {
-    default: 'Construction Markup Tools — Professional Bluebeam Tool Sets',
+    default: 'Construction Markup Tools — Job Packs and Bluebeam Tool Sets',
     template: '%s | Construction Markup Tools',
   },
   description:
-    'Download original Bluebeam Revu markup tool sets for electrical, fire alarm, CCTV, security, AV/data, MEP, and estimating workflows. Built for construction professionals.',
+    'Download focused construction inspection, testing, commissioning and handover templates, plus original Bluebeam Revu markup tool sets.',
   openGraph: {
     siteName: 'Construction Markup Tools',
     locale: 'en_GB',

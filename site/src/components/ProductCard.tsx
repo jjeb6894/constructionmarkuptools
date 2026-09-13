@@ -13,6 +13,15 @@ const categoryColours: Record<string, string> = {
   Plumbing: 'bg-cyan-50 text-cyan-700 ring-cyan-200',
   Estimating: 'bg-green-50 text-green-700 ring-green-200',
   Free: 'bg-brand-50 text-brand-700 ring-brand-200',
+  'Heating Records': 'bg-orange-50 text-orange-800 ring-orange-200',
+  'Plumbing Records': 'bg-cyan-50 text-cyan-800 ring-cyan-200',
+  'Masonry QA': 'bg-stone-100 text-stone-800 ring-stone-300',
+  'Firestopping QA': 'bg-red-50 text-red-800 ring-red-200',
+  'Concrete QA': 'bg-zinc-100 text-zinc-800 ring-zinc-300',
+  'Fire Door QA': 'bg-rose-50 text-rose-800 ring-rose-200',
+  'Site Safety Records': 'bg-yellow-50 text-yellow-800 ring-yellow-200',
+  'Heat Pump Records': 'bg-sky-50 text-sky-800 ring-sky-200',
+  'Roofing QA': 'bg-indigo-50 text-indigo-800 ring-indigo-200',
 };
 
 const categoryIcons: Record<string, string> = {
@@ -27,6 +36,15 @@ const categoryIcons: Record<string, string> = {
   Plumbing: '🔧',
   Estimating: '📐',
   Free: '🎁',
+  'Heating Records': '♨️',
+  'Plumbing Records': '🧪',
+  'Masonry QA': '🧱',
+  'Firestopping QA': '🧯',
+  'Concrete QA': '🏗️',
+  'Fire Door QA': '🚪',
+  'Site Safety Records': '🦺',
+  'Heat Pump Records': '🌡️',
+  'Roofing QA': '🏠',
 };
 
 interface Props {

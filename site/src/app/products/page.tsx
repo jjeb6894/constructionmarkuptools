@@ -7,24 +7,19 @@ import { products } from '@/lib/products';
 import { buildMetadata, collectionPageSchema } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Bluebeam Tool Sets and Symbol Packs',
+  title: 'Construction Templates and Bluebeam Tool Sets',
   description:
-    'Browse all original Bluebeam Revu markup tool sets for electrical, fire alarm, CCTV, security, AV/data, HVAC, plumbing, and estimating. Instant BTX download.',
+    'Download editable construction inspection, testing, commissioning and handover templates, plus original Bluebeam Revu markup tool sets.',
   path: '/products/',
-  keywords: ['bluebeam tool sets', 'bluebeam symbols', 'bluebeam markup tools', 'btx tool set download'],
+  keywords: ['construction templates Excel', 'construction inspection templates', 'commissioning sheets', 'bluebeam tool sets', 'bluebeam markup tools'],
 });
 
 const categories = [
   { label: 'All', value: 'all' },
-  { label: 'Electrical', value: 'Electrical' },
-  { label: 'Fire Alarm', value: 'Fire Alarm' },
-  { label: 'CCTV', value: 'CCTV' },
-  { label: 'Security', value: 'Security' },
-  { label: 'AV and Data', value: 'AV and Data' },
-  { label: 'HVAC', value: 'HVAC' },
-  { label: 'Plumbing', value: 'Plumbing' },
-  { label: 'Estimating', value: 'Estimating' },
-  { label: 'Free', value: 'Free' },
+  { label: 'Inspection Forms', value: 'inspection' },
+  { label: 'Commissioning Logs', value: 'commissioning' },
+  { label: 'Test Certificates', value: 'testing' },
+  { label: 'Bluebeam Tool Sets', value: 'bluebeam' },
 ];
 
 export default function ProductsPage() {
@@ -34,7 +29,8 @@ export default function ProductsPage() {
     url: '/products/',
   });
 
-  const paidProducts = products.filter((p) => !p.isFree);
+  const jobPacks = products.filter((p) => p.productKind === 'job-pack');
+  const bluebeamProducts = products.filter((p) => !p.isFree && p.productKind !== 'job-pack');
   const freeProduct = products.find((p) => p.isFree);
 
   return (
@@ -45,9 +41,9 @@ export default function ProductsPage() {
         <Breadcrumbs crumbs={[{ name: 'Home', url: '/' }, { name: 'Products', url: '/products/' }]} />
 
         <div className="mt-6 mb-10">
-          <h1 className="text-h1 font-bold text-slate-900">Bluebeam Tool Sets and Symbol Packs</h1>
+          <h1 className="text-h1 font-bold text-slate-900">Construction Templates and Markup Tools</h1>
           <p className="mt-3 text-base text-slate-600 max-w-2xl">
-            Original downloadable markup libraries for Bluebeam Revu, organised by trade. Each pack imports as a BTX file into your Tool Chest and is ready to use immediately.
+            Download practical Excel records for live construction jobs and original Bluebeam markup libraries organised by trade. One-time purchase, reusable project copies, no subscription.
           </p>
         </div>
 
@@ -63,12 +59,32 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        {/* Products grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {paidProducts.map((product) => (
+        <section id="job-packs" className="scroll-mt-24">
+          <div className="mb-6">
+            <p className="text-xs font-bold uppercase tracking-wider text-brand-700">Needed on a live job</p>
+            <h2 className="mt-2 text-h2 font-bold text-slate-900">Inspection, Test and Commissioning Templates</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+              Focused workbooks for evidence that must be captured before work is covered, inspected, handed over or revisited.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {jobPacks.map((product) => (
+              <ProductCard key={product.slug} product={product} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-16 border-t border-slate-200 pt-12">
+          <div className="mb-6">
+            <p className="text-xs font-bold uppercase tracking-wider text-brand-700">Drawing workflow</p>
+            <h2 className="mt-2 text-h2 font-bold text-slate-900">Bluebeam Tool Sets and Symbol Packs</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {bluebeamProducts.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
-        </div>
+          </div>
+        </section>
 
         {/* Free sample highlight */}
         {freeProduct && (

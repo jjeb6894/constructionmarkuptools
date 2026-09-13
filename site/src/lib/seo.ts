@@ -43,7 +43,7 @@ export function organizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      'Downloadable Bluebeam Revu markup tool sets and symbol packs for construction professionals.',
+      'Downloadable construction inspection, testing, commissioning and handover templates, plus Bluebeam Revu markup tool sets.',
     sameAs: [],
   };
 }
@@ -68,12 +68,16 @@ export function productSchema({
   price,
   url,
   sku,
+  softwareRequirement,
+  available = false,
 }: {
   name: string;
   description: string;
   price: number | null;
   url: string;
   sku: string;
+  softwareRequirement?: string;
+  available?: boolean;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -87,12 +91,12 @@ export function productSchema({
       '@type': 'Offer',
       price: price ?? 0,
       priceCurrency: 'GBP',
-      availability: 'https://schema.org/PreOrder',
+      availability: available ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
     },
     additionalProperty: {
       '@type': 'PropertyValue',
       name: 'softwareRequirements',
-      value: 'Bluebeam Revu 2019, 20, or 21',
+      value: softwareRequirement ?? 'Bluebeam Revu 2019, 20, or 21',
     },
   };
 }

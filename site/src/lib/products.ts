@@ -1,3 +1,5 @@
+import { jobPacks } from './jobPacks';
+
 export interface ProductFaq {
   question: string;
   answer: string;
@@ -26,9 +28,15 @@ export interface Product {
   relatedSlugs: string[];
   isFree?: boolean;
   isBundle?: boolean;
+  productKind?: 'bluebeam' | 'job-pack';
+  previewImage?: string;
+  checkoutUrl?: string;
+  jobMoment?: string;
+  sourceNote?: string;
+  softwareRequirement?: string;
 }
 
-export const products: Product[] = [
+const bluebeamProducts: Product[] = [
   {
     slug: 'bluebeam-electrical-tool-set',
     title: 'Bluebeam Electrical Tool Set',
@@ -1011,6 +1019,8 @@ export const products: Product[] = [
   },
 ];
 
+export const products: Product[] = [...bluebeamProducts, ...jobPacks];
+
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
@@ -1025,4 +1035,13 @@ export function getFeaturedProducts(): Product[] {
   return products.filter((p) =>
     ['bluebeam-electrical-tool-set', 'bluebeam-fire-alarm-symbols', 'bluebeam-cctv-tool-set', 'bluebeam-estimating-takeoff-tools'].includes(p.slug)
   );
+}
+
+export function getFeaturedJobPacks(): Product[] {
+  return products.filter((p) => [
+    'ufh-screed-dry-out-log-template',
+    'soil-stack-air-test-certificate-template',
+    'cavity-tray-inspection-photo-record-template',
+    'firestop-penetration-evidence-register-template',
+  ].includes(p.slug));
 }

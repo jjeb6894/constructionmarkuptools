@@ -37,10 +37,34 @@ const badges = [
   },
 ];
 
-export default function TrustBadges() {
+const workbookBadges = [
+  {
+    icon: badges[0].icon,
+    label: 'Editable workbook',
+    description: 'Adapt project fields and add your branding',
+  },
+  {
+    icon: badges[1].icon,
+    label: 'Instant download',
+    description: 'XLSX file available after secure payment',
+  },
+  {
+    icon: badges[2].icon,
+    label: 'Reusable copies',
+    description: 'Create a clean copy for every project',
+  },
+  {
+    icon: badges[3].icon,
+    label: 'One-time price',
+    description: 'No subscription or per-project charge',
+  },
+];
+
+export default function TrustBadges({ kind = 'bluebeam' }: { kind?: 'bluebeam' | 'job-pack' }) {
+  const items = kind === 'job-pack' ? workbookBadges : badges;
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-      {badges.map((badge) => (
+      {items.map((badge) => (
         <div
           key={badge.label}
           className="flex flex-col items-center text-center p-4 rounded-xl bg-slate-50 border border-slate-200"

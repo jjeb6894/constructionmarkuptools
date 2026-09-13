@@ -1,4 +1,5 @@
 User-Agent: *
 Allow: /
+Disallow: /downloads/
 
 Sitemap: https://constructionmarkuptools.com/sitemap.xml

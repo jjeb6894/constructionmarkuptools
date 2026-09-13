@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
 const productLinks = [
+  { label: 'Inspection & Commissioning Templates', href: '/products/#job-packs' },
+  { label: 'UFH Screed Dry-Out Log', href: '/products/ufh-screed-dry-out-log-template/' },
+  { label: 'Soil Stack Air Test Certificate', href: '/products/soil-stack-air-test-certificate-template/' },
   { label: 'Electrical Tool Set', href: '/products/bluebeam-electrical-tool-set/' },
   { label: 'Fire Alarm Symbols', href: '/products/bluebeam-fire-alarm-symbols/' },
   { label: 'CCTV Tool Set', href: '/products/bluebeam-cctv-tool-set/' },
-  { label: 'Security Tool Set', href: '/products/bluebeam-security-tool-set/' },
-  { label: 'AV and Data Symbols', href: '/products/bluebeam-av-data-symbols/' },
-  { label: 'Estimating Tools', href: '/products/bluebeam-estimating-takeoff-tools/' },
+  { label: 'All Bluebeam Tool Sets', href: '/products/' },
 ];
 
 const resourceLinks = [
@@ -36,7 +37,7 @@ export default function Footer() {
               Construction Markup Tools
             </Link>
             <p className="mt-3 text-sm text-slate-400 leading-relaxed">
-              Original downloadable Bluebeam Revu markup tool sets for construction professionals.
+              Focused construction records and original Bluebeam Revu markup tool sets for construction professionals.
             </p>
             <p className="mt-4 text-xs text-slate-500 leading-relaxed">
               Bluebeam and Revu are trademarks of their respective owners. This site is independent and not affiliated with or endorsed by Bluebeam, Inc.
